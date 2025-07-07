@@ -18,7 +18,7 @@ const theme = createTheme({
 
 export default function App () {
   const [language, setLanguage] = useState("ru")
-  const t = translations[language]
+  const t = translations[language as keyof typeof translations]
 
   useEffect(() => {
     const savedLanguage: string =  localStorage.getItem("language") || "ru"

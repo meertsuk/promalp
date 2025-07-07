@@ -144,7 +144,7 @@ export default function OrderForm ({t}: OrderFormProps) {
               {t["modal"]}
             </Typography>
             <Button onClick={handleClose}
-                    variiant="contained"
+                    variant="contained"
 
                     sx={{
                       width: "40%",
