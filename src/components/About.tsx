@@ -1,5 +1,5 @@
 import {Box, Typography, useMediaQuery} from "@mui/material";
-
+import aboutImg from "../assets/images/equipment_of_industrial_mountaineer_laborer_on_roo_2024_07_24_18.jpg"
 
 
 interface AboutProps {
@@ -19,7 +19,7 @@ export default function About({t}: AboutProps) {
           <Typography variant="body1" align="left" py={4} px={2}>
             {t["about"]}
           </Typography>
-          <img src="/src/assets/images/equipment_of_industrial_mountaineer_laborer_on_roo_2024_07_24_18.jpg"
+          <img src={aboutImg}
                alt="About"
                style={{width: "350px", borderRadius: "0.5rem"}}
           />
@@ -50,7 +50,7 @@ export default function About({t}: AboutProps) {
           <Typography variant="body1" align="left" py={4} px={2} fontSize="1.2rem">
             {t["about"]}
           </Typography>
-          <img src="/src/assets/images/equipment_of_industrial_mountaineer_laborer_on_roo_2024_07_24_18.jpg"
+          <img src={aboutImg}
                alt="About"
                style={{width: "300px", height: "200px" , borderRadius: "0.5rem"}}
           />

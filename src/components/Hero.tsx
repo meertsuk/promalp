@@ -1,5 +1,5 @@
 import {Container, Box, Typography, useMediaQuery} from "@mui/material";
-
+import heroImg from "../assets/images/cleaner-clean-glass-building.jpg"
 interface HeroProps {
   t: Record<string, string>
 }
@@ -13,7 +13,7 @@ export default function Hero({t}: HeroProps) {
 
     <Box
       sx={{
-      backgroundImage: "url('../src/assets/images/cleaner-clean-glass-building.jpg')",
+      backgroundImage: `url(${heroImg})`,
       height: "100vh",
       width: "100vw",
       backgroundSize: "cover",

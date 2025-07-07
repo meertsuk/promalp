@@ -1,6 +1,6 @@
 import {Box, Button, Modal, TextField, Typography,} from "@mui/material";
 import {useState} from "react";
-
+import orderImg from "../assets/images/IMG_7842.jpg"
 
 interface OrderFormProps {
   t: Record<string, string>
@@ -24,7 +24,7 @@ export default function OrderForm ({t}: OrderFormProps) {
     <Box
       id="order"
       sx={{
-        backgroundImage: "url('../src/assets/images/IMG_7842.jpg')",
+        backgroundImage: `url(${orderImg})`,
         backgroundSize: "cover",
         py: "5rem",
       }}

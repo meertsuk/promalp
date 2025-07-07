@@ -1,5 +1,9 @@
 import {Box, Card, CardContent, CardMedia, Container, Typography} from "@mui/material";
-
+import cleaningImg from "../assets/images/servicesImages/cleaning.png"
+import adImg from "../assets/images/servicesImages/ad.png"
+import acImg from "../assets/images/servicesImages/ac.png"
+import brushImg from "../assets/images/servicesImages/brush.png"
+import etcImg from "../assets/images/servicesImages/etc1.png"
 
 interface ServicesProps {
   t: Record<string, string>
@@ -11,11 +15,11 @@ interface Service {
 }
 
 const services: Service[] = [
-  {key: "wash", image: "../src/assets/images/servicesImages/cleaning.png"},
-  {key: "mountAd", image: "../src/assets/images/servicesImages/ad.png"},
-  {key: "mountAc", image: "../src/assets/images/servicesImages/ac.png"},
-  {key: "paint", image: "../src/assets/images/servicesImages/brush.png"},
-  {key: "etc", image: "../src/assets/images/servicesImages/etc1.png"},
+  {key: "wash", image: `${cleaningImg}`},
+  {key: "mountAd", image: `${adImg}`},
+  {key: "mountAc", image: `${acImg}`},
+  {key: "paint", image: `${brushImg}`},
+  {key: "etc", image: `${etcImg}`},
 ]
 
 export default function Services ({t}: ServicesProps) {
