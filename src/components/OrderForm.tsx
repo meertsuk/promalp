@@ -1,5 +1,5 @@
 import {Box, Button, Modal, TextField, Typography,} from "@mui/material";
-import {useState} from "react";
+import {useState, useRef} from "react";
 import orderImg from "../assets/images/IMG_7842.jpg"
 
 interface OrderFormProps {
@@ -9,10 +9,39 @@ interface OrderFormProps {
 export default function OrderForm ({t}: OrderFormProps) {
   const [open, setOpen] = useState(false)
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const formRef = useRef<HTMLFormElement | null>(null)
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    setOpen(true)
+    if (!formRef.current) return
+
+    const formData = new FormData(formRef.current)
+
+    try {
+      const response = await fetch("https://formspree.io/f/xblygoov", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      })
+
+      if (response.ok) {
+        formRef.current.reset()
+        setOpen(true)
+      } else {
+        const errorData = await response.json()
+        console.error("Formspree error", errorData)
+        alert("Error sending form")
+      }
+
+    } catch (error) {
+      console.error("Error sending form", error)
+      alert("Network error sending form. Please try again later.")
+    }
+
+
   }
 
   const handleClose = () => {
@@ -52,6 +81,7 @@ export default function OrderForm ({t}: OrderFormProps) {
         </Typography>
 
         <form
+          ref={formRef}
           onSubmit={handleSubmit}
           style={{
             display: "flex",
