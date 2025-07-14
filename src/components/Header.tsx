@@ -1,7 +1,7 @@
 import {
   AppBar,
   Box,
-  Button,
+  Button, Collapse,
   Container,
   IconButton,
   Toolbar,
@@ -9,6 +9,10 @@ import {
 
 } from "@mui/material"
 import LanguageIcon from "@mui/icons-material/Language"
+import {useState} from "react"
+import rusImg from "../assets/images/flags/Flag_of_the_Russian_Federation.svg.png"
+import engImg from "../assets/images/flags/flag-eng@2x.png"
+import geImg from "../assets/images/flags/Flag_of_Georgia.svg.png"
 
 interface HeaderProps {
   language: string
@@ -17,6 +21,9 @@ interface HeaderProps {
 }
 
 export default function Header ({language, changeLanguage, t}: HeaderProps) {
+  const [showLangButtons, setShowLangButtons] = useState(false)
+
+
   return (
     <AppBar position='absolute' color='primary'
             sx={{
@@ -31,9 +38,6 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
           sx={{
             justifyContent: "space-between",
             flexWrap: "wrap",
-
-
-
           }}
         >
           <Typography variant="h6"  sx={{ fontWeight: 700 }}>
@@ -49,27 +53,63 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
           </Box>
 
           <Box sx={{display: "flex", alignItems: "center", gap: 1, py: "0.5rem"}}>
-            <IconButton color="inherit" >
+            <IconButton
+              color="inherit"
+              onClick={() => setShowLangButtons(prev => !prev)}
+            >
               <LanguageIcon />
             </IconButton>
-            <Button
-              color="inherit"
-              onClick={() => changeLanguage("ru")}
-              variant={language === "ru" ? ("contained" as "contained") : ("outlined" as "outlined")}
-            >RU
-            </Button>
-            <Button
-              color="inherit"
-              onClick={() => changeLanguage("en")}
-              variant={language === "en" ? ("contained" as "contained") : ("outlined" as "outlined")}
-            >EN
-            </Button>
-            <Button
-              color="inherit"
-              onClick={() => changeLanguage("ge")}
-              variant={language === "ge" ? ("contained" as "contained") : ("outlined" as "outlined")}
-            >GE
-            </Button>
+
+            <Collapse in={showLangButtons} orientation="horizontal">
+              <Box sx={{display: "flex", gap:1}}>
+                <Button
+                  onClick={() => changeLanguage("ru")}
+                  variant={language === "ru" ? ("contained" as "contained") : ("outlined" as "outlined")}
+                  sx={{
+                    backgroundImage: `url(${rusImg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    color: "black",
+                    textShadow: "0 0 3px rgba(0, 0, 0, 0.15)",
+                    fontWeight: 900,
+                    fontSize: "1.3rem",
+                    p: "0.1rem"
+                  }}
+                >RU
+                </Button>
+                <Button
+                  onClick={() => changeLanguage("en")}
+                  variant={language === "en" ? ("contained" as "contained") : ("outlined" as "outlined")}
+                  sx={{
+                    backgroundImage: `url(${engImg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    color: "black",
+                    textShadow: "0 0 3px rgba(0, 0, 0, 0.15)",
+                    fontWeight: 900,
+                    fontSize: "1.3rem",
+                    p: "0.1rem"
+                  }}
+                >EN
+                </Button>
+                <Button
+                  onClick={() => changeLanguage("ge")}
+                  variant={language === "ge" ? ("contained" as "contained") : ("outlined" as "outlined")}
+                  sx={{
+                    backgroundImage: `url(${geImg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    color: "black",
+                    textShadow: "0 0 3px rgba(0, 0, 0, 0.15)",
+                    fontWeight: 900,
+                    fontSize: "1.3rem",
+                    p: "0.1rem"
+                  }}
+                >GE
+                </Button>
+              </Box>
+            </Collapse>
+
           </Box>
 
         </Toolbar>
