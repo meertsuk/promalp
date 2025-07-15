@@ -15,7 +15,7 @@ export default function Hero({t}: HeroProps) {
       sx={{
       backgroundImage: `url(${heroImg})`,
       height: "100vh",
-      width: "100vw",
+      width: "100%",
       backgroundSize: "cover",
       backgroundPosition: "center",
       display: "flex",

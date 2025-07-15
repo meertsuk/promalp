@@ -69,13 +69,9 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
                     backgroundImage: `url(${rusImg})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    color: "black",
-                    textShadow: "0 0 3px rgba(0, 0, 0, 0.15)",
-                    fontWeight: 900,
-                    fontSize: "1.3rem",
-                    p: "0.1rem"
+                    height: "2.5rem"
                   }}
-                >RU
+                >
                 </Button>
                 <Button
                   onClick={() => changeLanguage("en")}
@@ -84,13 +80,9 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
                     backgroundImage: `url(${engImg})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    color: "black",
-                    textShadow: "0 0 3px rgba(0, 0, 0, 0.15)",
-                    fontWeight: 900,
-                    fontSize: "1.3rem",
-                    p: "0.1rem"
+                    height: "2.5rem"
                   }}
-                >EN
+                >
                 </Button>
                 <Button
                   onClick={() => changeLanguage("ge")}
@@ -99,13 +91,9 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
                     backgroundImage: `url(${geImg})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    color: "black",
-                    textShadow: "0 0 3px rgba(0, 0, 0, 0.15)",
-                    fontWeight: 900,
-                    fontSize: "1.3rem",
-                    p: "0.1rem"
+                    height: "2.5rem"
                   }}
-                >GE
+                >
                 </Button>
               </Box>
             </Collapse>

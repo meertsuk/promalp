@@ -16,7 +16,7 @@ export default function About({t}: AboutProps) {
           {t["aboutTitle"]}
         </Typography>
         <Box sx={{display: "flex", justifyContent: "space-between", gap: 4}}>
-          <Typography variant="body1" align="left" py={4} px={2}>
+          <Typography variant="body1" align="left"  sx={{marginLeft: "2rem", fontSize:"1.4rem"}}>
             {t["about"]}
           </Typography>
           <img src={aboutImg}
