@@ -48,7 +48,7 @@ export default function Hero({t}: HeroProps) {
         <Typography variant={ isMobile ? ("h4" as "h4") : ("h3" as "h3") } component="h1" gutterBottom >
           {t['headTitle']}
         </Typography>
-        <Typography variant="h5" >
+        <Typography variant={ isMobile ? ("h5" as "h5") : ("h4" as "h4")} >
           {t['slogan']}
         </Typography>
       </Container>

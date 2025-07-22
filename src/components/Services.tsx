@@ -1,4 +1,4 @@
-import {Box, Card, CardContent, CardMedia, Container, Typography} from "@mui/material";
+import {Box, Card, CardContent, CardMedia, Container, Typography, useMediaQuery} from "@mui/material";
 import cleaningImg from "../assets/images/servicesImages/cleaning.png"
 import adImg from "../assets/images/servicesImages/ad.png"
 import acImg from "../assets/images/servicesImages/ac.png"
@@ -23,6 +23,8 @@ const services: Service[] = [
 ]
 
 export default function Services ({t}: ServicesProps) {
+  const isMobile = useMediaQuery("(max-width: 768px)")
+
   return (
     <Box
       sx={{
@@ -33,7 +35,7 @@ export default function Services ({t}: ServicesProps) {
     >
       <Container>
         <Typography
-          variant="h3"
+          variant={isMobile ? ("h4" as "h4") : ("h3" as "h3") }
           align="center"
           sx={{
             paddingTop: "2rem",
@@ -63,7 +65,7 @@ export default function Services ({t}: ServicesProps) {
                 }
                 sx={{
                   backgroundColor: "#F6F6F6",
-                  width: "300px",
+                  width: `${isMobile ? "260px" :  "300px"}`,
                   height: "300px",
                   boxShadow: 6,
                   borderRadius: "1rem",

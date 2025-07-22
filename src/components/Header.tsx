@@ -36,7 +36,7 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
         <Toolbar
           disableGutters
           sx={{
-            justifyContent: "space-between",
+            justifyContent: "space-around",
             flexWrap: "wrap",
           }}
         >
