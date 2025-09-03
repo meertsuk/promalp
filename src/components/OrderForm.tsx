@@ -62,6 +62,7 @@ export default function OrderForm ({t}: OrderFormProps) {
 
         sx={{
           maxWidth: "600px",
+          width: "95%",
           margin: "0 auto",
           padding: "2rem",
           backgroundColor: "#fff",

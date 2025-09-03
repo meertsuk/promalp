@@ -1,15 +1,15 @@
 import {
   AppBar,
   Box,
-  Button, Collapse,
+  Button,
   Container,
-  IconButton,
+
   Toolbar,
   Typography,
+  useMediaQuery,
 
 } from "@mui/material"
-import LanguageIcon from "@mui/icons-material/Language"
-import {useState} from "react"
+
 import rusImg from "../assets/images/flags/Flag_of_the_Russian_Federation.svg.png"
 import engImg from "../assets/images/flags/flag-eng@2x.png"
 import geImg from "../assets/images/flags/Flag_of_Georgia.svg.png"
@@ -21,8 +21,8 @@ interface HeaderProps {
 }
 
 export default function Header ({language, changeLanguage, t}: HeaderProps) {
-  const [showLangButtons, setShowLangButtons] = useState(false)
 
+ const isMobile = useMediaQuery("(max-width: 768px)")
 
   return (
     <AppBar position='absolute' color='primary'
@@ -37,30 +37,39 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
           disableGutters
           sx={{
             justifyContent: "space-around",
+            alignItems: "center",
             flexWrap: "wrap",
           }}
         >
-          <Typography variant="h6"  sx={{ fontWeight: 700 }}>
+          <Typography variant="h1"  sx={{
+            fontWeight: 700,
+            textAlign: "center",
+            fontSize: isMobile ? "2rem" : "3rem",
+          }}>
             {t["headTitle"]}
           </Typography>
 
-          <Box>
-            <Button color="inherit" href="#services">{t["types"]}</Button>
-            <Button color="inherit" href="#examples">{t["examples"]}</Button>
-            <Button color="inherit" href="#about">{t["aboutTitle"]}</Button>
-            <Button color="inherit" href="#contact">{t["contact"]}</Button>
-            <Button color="inherit" href="#order">{t["formTitle"]}</Button>
+          <Box sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            marginTop: "1rem",
+            marginBottom: "1rem",
+          }}>
+            <Button sx={{backgroundColor: "#213FC4"}} color="inherit" href="#services">{t["types"]}</Button>
+            <Button sx={{backgroundColor: "#213FC4"}} color="inherit" href="#examples">{t["examples"]}</Button>
+            <Button sx={{backgroundColor: "#213FC4"}} color="inherit" href="#about">{t["aboutTitle"]}</Button>
+            <Button sx={{backgroundColor: "#213FC4"}} color="inherit" href="#contact">{t["contact"]}</Button>
+            <Button sx={{backgroundColor: "#213FC4"}} color="inherit" href="#order">{t["formTitle"]}</Button>
           </Box>
 
-          <Box sx={{display: "flex", alignItems: "center", gap: 1, py: "0.5rem"}}>
-            <IconButton
-              color="inherit"
-              onClick={() => setShowLangButtons(prev => !prev)}
-            >
-              <LanguageIcon />
-            </IconButton>
 
-            <Collapse in={showLangButtons} orientation="horizontal">
+
+
+
               <Box sx={{display: "flex", gap:1}}>
                 <Button
                   onClick={() => changeLanguage("ru")}
@@ -96,9 +105,9 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
                 >
                 </Button>
               </Box>
-            </Collapse>
 
-          </Box>
+
+
 
         </Toolbar>
       </Container>

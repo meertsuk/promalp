@@ -52,6 +52,7 @@ export default function About({t}: AboutProps) {
           </Typography>
           <img src={aboutImg}
                alt="About"
+               loading="lazy"
                style={{width: "300px", height: "200px" , borderRadius: "0.5rem"}}
           />
         </Box>

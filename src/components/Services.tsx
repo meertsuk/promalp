@@ -1,4 +1,5 @@
 import {Box, Card, CardContent, CardMedia, Container, Typography, useMediaQuery} from "@mui/material";
+
 import cleaningImg from "../assets/images/servicesImages/cleaning.png"
 import adImg from "../assets/images/servicesImages/ad.png"
 import acImg from "../assets/images/servicesImages/ac.png"
@@ -11,7 +12,7 @@ interface ServicesProps {
 
 interface Service {
   key: string,
-  image: string
+  image: any
 }
 
 const services: Service[] = [
@@ -66,8 +67,9 @@ export default function Services ({t}: ServicesProps) {
                 sx={{
                   backgroundColor: "#F6F6F6",
                   width: `${isMobile ? "260px" :  "300px"}`,
-                  height: "300px",
+                  height: `${isMobile ? "340px" :  "300px"}`,
                   boxShadow: 6,
+                  py: "auto",
                   borderRadius: "1rem",
                   transition: "all 0.3s ease",
                   '&:hover': {
@@ -82,6 +84,7 @@ export default function Services ({t}: ServicesProps) {
                   width="200"
                   image={service.image}
                   alt={t[service.key]}
+                  loading="lazy"
                   sx={{
                     objectFit: "contain"
                   }}
