@@ -1,10 +1,10 @@
 import {Box, Card, CardContent, CardMedia, Container, Typography, useMediaQuery} from "@mui/material";
 
-import cleaningImg from "../assets/images/servicesImages/cleaning.png"
-import adImg from "../assets/images/servicesImages/ad.png"
-import acImg from "../assets/images/servicesImages/ac.png"
-import brushImg from "../assets/images/servicesImages/brush.png"
-import etcImg from "../assets/images/servicesImages/etc1.png"
+import cleaningImg from "../assets/images/servicesImages/cleaning.webp"
+import adImg from "../assets/images/servicesImages/ad.webp"
+import acImg from "../assets/images/servicesImages/ac.webp"
+import brushImg from "../assets/images/servicesImages/brush.webp"
+import etcImg from "../assets/images/servicesImages/etc1.webp"
 
 interface ServicesProps {
   t: Record<string, string>

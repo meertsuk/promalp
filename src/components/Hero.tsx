@@ -1,5 +1,5 @@
 import {Container, Box, Typography, useMediaQuery} from "@mui/material";
-import heroImg from "../assets/images/cleaner-clean-glass-building.jpg"
+import heroImg from "../assets/images/imgWebp/cleaner-clean-glass-building.webp"
 interface HeroProps {
   t: Record<string, string>
 }

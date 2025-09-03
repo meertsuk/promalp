@@ -3,15 +3,12 @@ import {
   Box,
   Button,
   Container,
-
   Toolbar,
   Typography,
-
-
 } from "@mui/material"
 
 import rusImg from "../assets/images/flags/Flag_of_the_Russian_Federation.svg.png"
-import engImg from "../assets/images/flags/flag-eng@2x.png"
+import engImg from "../assets/images/flags/flag-eng@2x.webp"
 import geImg from "../assets/images/flags/Flag_of_Georgia.svg.png"
 
 interface HeaderProps {

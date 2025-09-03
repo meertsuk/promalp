@@ -1,5 +1,5 @@
 import {Box, Typography, useMediaQuery} from "@mui/material";
-import aboutImg from "../assets/images/equipment_of_industrial_mountaineer_laborer_on_roo_2024_07_24_18.jpg"
+import aboutImg from "../assets/images/imgWebp/equipment_of_industrial_mountaineer_laborer_on_roo_2024_07_24_18.webp"
 
 
 interface AboutProps {

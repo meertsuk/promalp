@@ -1,6 +1,6 @@
 import {Box, Button, Modal, TextField, Typography,} from "@mui/material";
 import {useState, useRef} from "react";
-import orderImg from "../assets/images/IMG_7842.jpg"
+import orderImg from "../assets/images/imgWebp/IMG_7842.webp"
 
 interface OrderFormProps {
   t: Record<string, string>
