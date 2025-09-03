@@ -6,7 +6,7 @@ import {
 
   Toolbar,
   Typography,
-  useMediaQuery,
+
 
 } from "@mui/material"
 
@@ -22,7 +22,7 @@ interface HeaderProps {
 
 export default function Header ({language, changeLanguage, t}: HeaderProps) {
 
- const isMobile = useMediaQuery("(max-width: 768px)")
+
 
   return (
     <AppBar position='absolute' color='primary'
