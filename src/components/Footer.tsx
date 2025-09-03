@@ -24,7 +24,7 @@ export default function Footer ({t}: FooterProps) {
           </Stack>
           <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" >
             <EmailIcon fontSize="medium" />
-            <Typography fontSize="1.3rem">info@alpinist.ge</Typography>
+            <Typography fontSize="1.3rem">sewenwinds@gmail.com</Typography>
           </Stack>
           <Typography variant="h5" align="center" py={4}>{t["social"]}</Typography>
           <Stack direction="row" spacing={2} alignItems="center" justifyContent="center" >
@@ -33,16 +33,21 @@ export default function Footer ({t}: FooterProps) {
               href="https://www.instagram.com/alpgroupge?igsh=MXZtZW1ieWFzZWJjaA=="
               target="_blank"
               rel="noopener"
+              sx={{
+                width: 64,
+                height: 64,
+              }}
             >
-              <InstagramIcon fontSize="large"/>
+              <InstagramIcon sx={{ fontSize: "4rem" }}/>
             </IconButton>
             <IconButton
               component="a"
               href="https://wa.me/995591063029"
               target="_blank"
               rel="noopener"
+              size="large"
             >
-              <WhatsAppIcon fontSize="large"/>
+              <WhatsAppIcon sx={{fontSize: "4rem"}}/>
             </IconButton>
 
           </Stack>

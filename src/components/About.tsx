@@ -16,12 +16,12 @@ export default function About({t}: AboutProps) {
           {t["aboutTitle"]}
         </Typography>
         <Box sx={{display: "flex", justifyContent: "space-between", gap: 4}}>
-          <Typography variant="body1" align="left"  sx={{marginLeft: "2rem", fontSize:"1.4rem"}}>
+          <Typography variant="body1" align="center"  sx={{marginLeft: "2rem", fontSize:"1.8rem"}}>
             {t["about"]}
           </Typography>
           <img src={aboutImg}
                alt="About"
-               style={{width: "350px", borderRadius: "0.5rem"}}
+               style={{width: "350px", borderRadius: "0.5rem", margin: "0 1rem"}}
           />
         </Box>
       </Box>
@@ -47,12 +47,14 @@ export default function About({t}: AboutProps) {
           gap: 4,
           alignItems: "center",
         }}>
-          <Typography variant="body1" align="left" py={4} px={2} fontSize="1.2rem">
+          <Typography
+            component="p"
+            sx={{ fontSize: "1.5rem", paddingLeft: "1rem", textAlign: "left" }}
+          >
             {t["about"]}
           </Typography>
           <img src={aboutImg}
                alt="About"
-               loading="lazy"
                style={{width: "300px", height: "200px" , borderRadius: "0.5rem"}}
           />
         </Box>

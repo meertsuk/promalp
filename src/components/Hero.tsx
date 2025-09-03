@@ -45,7 +45,11 @@ export default function Hero({t}: HeroProps) {
           zIndex: 2,
         }}
       >
-        <Typography variant={ isMobile ? ("h4" as "h4") : ("h3" as "h3") } component="h1" gutterBottom >
+        <Typography variant={ isMobile ? ("h4" as "h4") : ("h3" as "h3") }
+                    component="h1"
+                    gutterBottom
+                    sx={{marginTop: `${isMobile ? "40vh" : null}`}}
+        >
           {t['headTitle']}
         </Typography>
         <Typography variant={ isMobile ? ("h5" as "h5") : ("h4" as "h4")} >
