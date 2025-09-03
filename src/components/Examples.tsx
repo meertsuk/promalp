@@ -47,7 +47,6 @@ export default function Examples({t}: ExamplesProps) {
               <img
                 src={image}
                 alt={`Photo ${index + 1}`}
-                loading='lazy'
                 style={{
                   width: "100%",
                   height: "80vh",

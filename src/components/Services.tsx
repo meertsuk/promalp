@@ -84,7 +84,6 @@ export default function Services ({t}: ServicesProps) {
                   width="200"
                   image={service.image}
                   alt={t[service.key]}
-                  loading="lazy"
                   sx={{
                     objectFit: "contain"
                   }}
