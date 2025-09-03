@@ -44,7 +44,7 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
           <Typography variant="h1"  sx={{
             fontWeight: 700,
             textAlign: "center",
-            fontSize: isMobile ? "2rem" : "3rem",
+            fontSize: '2rem'
           }}>
             {t["headTitle"]}
           </Typography>
