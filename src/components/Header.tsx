@@ -24,9 +24,8 @@ export default function Header ({language, changeLanguage, t}: HeaderProps) {
   return (
     <AppBar position='absolute' color='primary'
             sx={{
-              opacity: 0.8,
+              opacity: 0.9,
               py: "1rem",
-
             }}
     >
       <Container maxWidth={false}>

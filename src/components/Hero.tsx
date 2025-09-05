@@ -30,7 +30,7 @@ export default function Hero({t}: HeroProps) {
     }}>
       <Box
         sx={{
-          backdropFilter: "brightness(0.7)",
+          backdropFilter: "brightness(0.8)",
           width: "100%",
           height: "100%",
           position: "absolute",

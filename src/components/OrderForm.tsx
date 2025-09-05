@@ -33,7 +33,7 @@ export default function OrderForm ({t}: OrderFormProps) {
       } else {
         const errorData = await response.json()
         console.error("Formspree error", errorData)
-        alert("Error sending form")
+        alert("Error sending form. Please check if email is correct and try again.")
       }
 
     } catch (error) {
